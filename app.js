@@ -19,3 +19,40 @@ fetch("./products.json")
     });
   })
   .catch(err => console.error("Error loading products:", err));
+
+const cartContainer = document.getElementById("cartItems");
+
+if (cartContainer) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let total = 0;
+
+  function renderCart() {
+    cartContainer.innerHTML = "";
+    total = 0;
+
+    cart.forEach((item, index) => {
+      total += item.price;
+
+      cartContainer.innerHTML += `
+        <div class="cart-item">
+          <img src="${item.image}">
+          <div>
+            <h4>${item.name}</h4>
+            <p>₹${item.price}</p>
+            <button onclick="removeItem(${index})">Remove</button>
+          </div>
+        </div>
+      `;
+    });
+
+    document.getElementById("total").innerText = "Total: ₹" + total;
+  }
+
+  window.removeItem = function(index) {
+    cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    renderCart();
+  };
+
+  renderCart();
+}
