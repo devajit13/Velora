@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Cart</title>
+  <title>VELORA Cart</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h2>Your Cart</h2>
-<div id="cartItems"></div>
-<h3 id="total"></h3>
-<a href="checkout.html"><button>Checkout</button></a>
+<header class="header">
+  <h1 class="logo">VELORA</h1>
+</header>
+
+<div class="cart-container">
+
+  <div class="cart-items">
+    <h2>Your Cart</h2>
+    <div id="cartItems"></div>
+  </div>
+
+  <div class="cart-summary">
+    <h3>Order Summary</h3>
+    <p id="total">Total: ₹0</p>
+    <a href="checkout.html">
+      <button class="checkout-btn">Proceed to Checkout</button>
+    </a>
+  </div>
+
+</div>
 
 <script src="app.js"></script>
 </body>
