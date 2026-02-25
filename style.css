@@ -10,4 +10,64 @@ nav a{color:gold;margin-left:20px;text-decoration:none}
 button{background:gold;border:none;padding:8px 14px;cursor:pointer}
 .product-page{display:flex;gap:40px;padding:40px}
 .product-page img{width:400px;border-radius:12px}
+
 .login-box,.checkout-box{width:300px;margin:80px auto;display:flex;flex-direction:column;gap:10px}
+.cart-container{
+  display:flex;
+  gap:40px;
+  padding:40px;
+  background:#0b0b0b;
+  min-height:100vh;
+}
+
+.cart-items{
+  flex:2;
+}
+
+.cart-summary{
+  flex:1;
+  background:#111;
+  padding:25px;
+  border-radius:12px;
+  height:fit-content;
+}
+
+.cart-item{
+  display:flex;
+  gap:20px;
+  background:#111;
+  padding:15px;
+  border-radius:12px;
+  margin-bottom:20px;
+  align-items:center;
+}
+
+.cart-item img{
+  width:90px;
+  height:90px;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+.qty-controls{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.qty-controls button{
+  background:gold;
+  border:none;
+  padding:5px 10px;
+  cursor:pointer;
+}
+
+.checkout-btn{
+  width:100%;
+  background:gold;
+  border:none;
+  padding:12px;
+  margin-top:20px;
+  cursor:pointer;
+  font-weight:bold;
+}
