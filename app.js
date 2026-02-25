@@ -1,6 +1,6 @@
-// LOAD PRODUCTS FROM LOCAL JSON (for GitHub Pages)
+// Load products from JSON (GitHub Pages compatible)
 
-fetch("products.json")
+fetch("./products.json")
   .then(res => res.json())
   .then(products => {
     const container = document.getElementById("products");
